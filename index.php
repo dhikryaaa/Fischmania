@@ -46,13 +46,24 @@
             font-size: 2em;
         }
 
-        .grid{
-            display:grid;
-            grid-row: 4;
-            grid-column: 2;
-            grid-template-rows: auto;
-            grid-template-columns: auto;
-        }
+    .grid { 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, auto);
+        gap: 1em; 
+    } 
+        
+    .card { 
+        background-color: #3F4149; 
+        border-radius: 10px; 
+        overflow: hidden; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        padding: 1em; 
+        color: #FFFFFF; 
+    }
     </style>
 </head>
 <body>
@@ -66,32 +77,70 @@
         <div class="grid">
             <div class="muswud card">
                 <div class="top-image">
-
+                    <img src="./src/muswud.png" alt="">
+                </div>
+                <div class="text-description">
+                    <h1>Moosewood</h1>
+                    <h2>
+                    Moosewood Village, occasionally referred to as Moosewood, is the first island located in the Middle of the map and one of the five major islands in the game where newly joined players first spawn in.
+                    </h2>
+                </div>
+            </div>
+            <div class="roslit card">
+                <div class="top-image">
+                    <img src="./src/roslit.png" alt="">
                 </div>
                 <div class="text-description">
 
                 </div>
             </div>
-            <div class="roslit card">
-                
-            </div>
             <div class="forsaken card">
+                <div class="top-image">
+                    <img src="./src/forsaken.png" alt="">
+                </div>
+                <div class="text-description">
 
+                </div>
             </div>
             <div class="ancient card">
+                <div class="top-image">
+                    <img src="./src/ensien aisl.png" alt="">
+                </div>
+                <div class="text-description">
 
+                </div>
             </div>
             <div class="depths">
+                <div class="top-image">
+                    <img src="./src/depths.png" alt="">
+                </div>
+                <div class="text-description">
 
-            </div>
+                </div>
+            </div>  
             <div class="desolate">
+                <div class="top-image">
+                    <img src="./src/desolate.png" alt="">
+                </div>
+                <div class="text-description">
 
+                </div>
             </div>
             <div class="vertigo">
+                <div class="top-image">
+                    <img src="./src/vertigo.png" alt="">
+                </div>
+                <div class="text-description">
 
+                </div>
             </div>
             <div class="snowcap">
+                <div class="top-image">
+                    <img src="./src/snowcap.png" alt="">
+                </div>
+                <div class="text-description">
 
+                </div>
             </div>
         </div>
     </main>
