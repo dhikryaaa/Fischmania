@@ -2,6 +2,6 @@
 Final Project Web Programming
 
 Anggota: 
-1. Andhika W. A
-2. Trischan Mahdy A.
-3. Adri F. Aldinata
+1. Andhika Widyadhana Aaryaputra
+2. Trischan Mahdy Arangga
+3. Adri Fadhlansyah Aldinata
