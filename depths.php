@@ -28,7 +28,7 @@
     .title h1 {
         text-align: center;
         font-size: 2rem;
-        color: #DD0996FF;
+        color: #59F2A1;
         margin-bottom: 20px;
     }
 
@@ -53,14 +53,15 @@
         color: white;
     }
 
-    span {
-        font-weight: 400;
-        color: #DD0996FF;
-        font-style: italic;
-    }
-
     blockquote {
         color: #ff5a5a;
+        font-style: italic;
+        margin: 10px 0;
+    }
+
+    span {
+        font-weight: 400;
+        color: #59F2A1;
         font-style: italic;
         margin: 10px 0;
     }
@@ -86,35 +87,27 @@
         color: white;
     }
     
-
     </style>
     </head>
     <body>
         <div class="container">
             <div class="title">
-                <h1>Ancient Isle</h1>
+                <h1>Depths</h1>
             </div>
             <div class="content">
                 <div class="image">
-                    <img src="src\ensien aisl.png" alt="Ancient Isle">
+                    <img src="src\depths.png" alt="Depths">
                 </div>
                 <div class="text">
                     <h2>Overview</h2>
                     <p>
-                    <span>Ancient Isle</span> is a large island surrounded by a series of much smaller islands located in the far east of the map, far out between <span>Snowcap Island</span> and <span>Mushgrove Swamp</span>. 
-                    as players approach the Ancient Isle, a warning message appears at the bottom of the screen:
+                    <span>The Depths</span> is an area hidden in <span>Vertigo</span> with glowing red crystals. Its only entrance is a door near red gems, which will only open if the player has 100% Bestiary in Vertigo and has obtained The Depths Key.
+After opening the gate, the player will need to do an obby with falling platforms. <br><br> The player can leave The Depths by backtracking through the obby or using a Conception Conch. Upon entering, the player is met with a dark cave where the only light source are the glowing crystals on its walls. The structure of the area itself is very steep.
+The gate to enter The Depths will stay open after leaving. <br><br> The gate is client-sided, meaning only the one who opened the gate will be the only one to enter.
+If you use The Depths Key in a private server to open the door, you will no longer need another key to open the gate when you rejoin the server. This feature is now implemented across all public servers as of November 23, 2024.
+Additionally, there is a boosted catch rate for Enchant Relics in The Depths.
                     </p>
-                    <blockquote>
-                        "The sea is dangerous. Sail with caution."
-                    </blockquote>
-                    <p>
-Suddenly, hazards such as whirlpools, spikes, and barrels of dynamite emerge from the ocean floor, inflicting damage to the player's boat. The boat starts with 100 HP and will explode if its HP reaches zero.
-<br><br>Steering into a whirlpool will cause the boat to sink immediately, forcing the player to navigate the waters without a vessel. Other dangers inflict a HP reduction of 10.
-<br><br>To avoid losing your boat, start slowing down to about 10-25s/ps once you near Ancient Isle.
-<br><br>At the islands, players can purchase the <span>Phoenix Rod</span> and <span>Stone Rod</span> for C$40,000 and C$3,000 respectively.
-<br><br>The <span>Megalodon</span> usually spawns around the Ancient Isle.
-                    </p><br><br>
-                </div>
+                </div><br><br>
                 <table>
                     <thead>
                         <tr>
@@ -127,25 +120,25 @@ Suddenly, hazards such as whirlpools, spikes, and barrels of dynamite emerge fro
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- infokan backend min -->
-                        <!-- <?php
-                        $sql = "SELECT * FROM calon_siswa";
-                        $query = mysqli_query($db, $sql);
-        
-                        while($siswa = mysqli_fetch_array($query)){
-                            echo "<tr>";
-        
-                            echo "<td>".$siswa['fish_name']."</td>";
-                            echo "<td>".$siswa['appearance']."</td>";
-                            echo "<td>".$siswa['bait']."</td>";
-                            echo "<td>".$siswa['time']."</td>";
-                            echo "<td>".$siswa['weather']."</td>";
-                            echo "<td>".$siswa['season']."</td>";
-        
-                            echo "</tr>";
-                        }
-                        ?> -->
-        
+                    <!-- infokan backend min -->
+                    <!-- <?php
+                    $sql = "SELECT * FROM calon_siswa";
+                    $query = mysqli_query($db, $sql);
+    
+                    while($siswa = mysqli_fetch_array($query)){
+                        echo "<tr>";
+    
+                        echo "<td>".$siswa['fish_name']."</td>";
+                        echo "<td>".$siswa['appearance']."</td>";
+                        echo "<td>".$siswa['bait']."</td>";
+                        echo "<td>".$siswa['time']."</td>";
+                        echo "<td>".$siswa['weather']."</td>";
+                        echo "<td>".$siswa['season']."</td>";
+    
+                        echo "</tr>";
+                    }
+                    ?> -->
+    
                     </tbody>
                 </table>
             </div>

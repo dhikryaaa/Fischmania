@@ -28,7 +28,7 @@
     .title h1 {
         text-align: center;
         font-size: 2rem;
-        color: #DD0996FF;
+        color: #97221AFF;
         margin-bottom: 20px;
     }
 
@@ -53,14 +53,15 @@
         color: white;
     }
 
-    span {
-        font-weight: 400;
-        color: #DD0996FF;
-        font-style: italic;
-    }
-
     blockquote {
         color: #ff5a5a;
+        font-style: italic;
+        margin: 10px 0;
+    }
+
+    span {
+        font-weight: 400;
+        color: #97221AFF;
         font-style: italic;
         margin: 10px 0;
     }
@@ -92,27 +93,20 @@
     <body>
         <div class="container">
             <div class="title">
-                <h1>Ancient Isle</h1>
+                <h1>Vertigo</h1>
             </div>
             <div class="content">
                 <div class="image">
-                    <img src="src\ensien aisl.png" alt="Ancient Isle">
+                    <img src="src\vertigo.png" alt="Vertigo">
                 </div>
                 <div class="text">
                     <h2>Overview</h2>
                     <p>
-                    <span>Ancient Isle</span> is a large island surrounded by a series of much smaller islands located in the far east of the map, far out between <span>Snowcap Island</span> and <span>Mushgrove Swamp</span>. 
-                    as players approach the Ancient Isle, a warning message appears at the bottom of the screen:
-                    </p>
-                    <blockquote>
-                        "The sea is dangerous. Sail with caution."
-                    </blockquote>
-                    <p>
-Suddenly, hazards such as whirlpools, spikes, and barrels of dynamite emerge from the ocean floor, inflicting damage to the player's boat. The boat starts with 100 HP and will explode if its HP reaches zero.
-<br><br>Steering into a whirlpool will cause the boat to sink immediately, forcing the player to navigate the waters without a vessel. Other dangers inflict a HP reduction of 10.
-<br><br>To avoid losing your boat, start slowing down to about 10-25s/ps once you near Ancient Isle.
-<br><br>At the islands, players can purchase the <span>Phoenix Rod</span> and <span>Stone Rod</span> for C$40,000 and C$3,000 respectively.
-<br><br>The <span>Megalodon</span> usually spawns around the Ancient Isle.
+                    <span>Vertigo</span>, also known as <span>The Great Abyss</span>. Is a cave hidden under the world with glowing crystals. 
+                    <br><br>It's only entrance is a <span>Strange Whirlpool</span> and its only exit is by dying, leaving the game or consuming a <span>Conception Conch</span>. 
+                    <br><br>Upon entering, you are met with a dark cave whose only light source are the glowing crystals on its walls. The structure of the cave itself is very steep.
+                    <br><br>Near the spawn point for Vertigo, there is a small stall where Synth resides. Synth acts as the <span>Merchant</span> of Vertigo, buying fish and selling the <span>Nocturnal Rod</span> for C$11,000, <span>Conception Conch</span> for C$444 each, and the <span>Aurora Rod</span> for C$90,000 (During <span>Aurora Borealis</span>). 
+                    <br>In Vertigo, he interacts with the player, even seeming upbeat and energetic.
                     </p><br><br>
                 </div>
                 <table>

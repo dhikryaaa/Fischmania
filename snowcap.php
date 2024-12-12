@@ -28,7 +28,7 @@
     .title h1 {
         text-align: center;
         font-size: 2rem;
-        color: #DD0996FF;
+        color: #61C5FFFF;
         margin-bottom: 20px;
     }
 
@@ -53,14 +53,15 @@
         color: white;
     }
 
-    span {
-        font-weight: 400;
-        color: #DD0996FF;
-        font-style: italic;
-    }
-
     blockquote {
         color: #ff5a5a;
+        font-style: italic;
+        margin: 10px 0;
+    }
+
+    span {
+        font-weight: 400;
+        color: #61C5FFFF;
         font-style: italic;
         margin: 10px 0;
     }
@@ -92,27 +93,22 @@
     <body>
         <div class="container">
             <div class="title">
-                <h1>Ancient Isle</h1>
+                <h1>Snowcap Island</h1>
             </div>
             <div class="content">
                 <div class="image">
-                    <img src="src\ensien aisl.png" alt="Ancient Isle">
+                    <img src="src\snowcap.png" alt="Roslit Bay">
                 </div>
                 <div class="text">
                     <h2>Overview</h2>
                     <p>
-                    <span>Ancient Isle</span> is a large island surrounded by a series of much smaller islands located in the far east of the map, far out between <span>Snowcap Island</span> and <span>Mushgrove Swamp</span>. 
-                    as players approach the Ancient Isle, a warning message appears at the bottom of the screen:
-                    </p>
-                    <blockquote>
-                        "The sea is dangerous. Sail with caution."
-                    </blockquote>
-                    <p>
-Suddenly, hazards such as whirlpools, spikes, and barrels of dynamite emerge from the ocean floor, inflicting damage to the player's boat. The boat starts with 100 HP and will explode if its HP reaches zero.
-<br><br>Steering into a whirlpool will cause the boat to sink immediately, forcing the player to navigate the waters without a vessel. Other dangers inflict a HP reduction of 10.
-<br><br>To avoid losing your boat, start slowing down to about 10-25s/ps once you near Ancient Isle.
-<br><br>At the islands, players can purchase the <span>Phoenix Rod</span> and <span>Stone Rod</span> for C$40,000 and C$3,000 respectively.
-<br><br>The <span>Megalodon</span> usually spawns around the Ancient Isle.
+                    <span>Snowcap Island</span> is a freezing island located Southeast of <span>Moosewood</span>. It features large glaciers and frozen peaks. 
+                    <br><br>The island is enormous yet few <span>NPCs</span> live there due to its harsh climate. <span>Snowcap Island</span> is surrounded by ice spikes and ice sheets that make navigating to land difficult. Two docks are located off the northwest section of the island. 
+                    <br><br>There is a locked hut beside the merchant's hut with a skeleton inside. There is no clear way or reason to unlock this hut.
+                    <br><br><br><span>Snowcap Cave</span>
+                    <br><br>This mysterious cave has three different entrances that may prove hard to find, the most common entrance is just around the left side (picture) of the mountain, it can be identified by the large opening in the rock. 
+                    The second and third are close together and are found by traveling along the right side of the mountain. 
+                    The cavern contains the <span>Windset Totem</span> which you can purchase for C$2,000, upon using the item it will change the weather event to windy. The cave has a regular abundance of <span>Glacierfish</span> and <span>Ringle</span>, making it great for fishing.
                     </p><br><br>
                 </div>
                 <table>

@@ -28,7 +28,7 @@
     .title h1 {
         text-align: center;
         font-size: 2rem;
-        color: #DD0996FF;
+        color: #C5560BFF;
         margin-bottom: 20px;
     }
 
@@ -53,14 +53,15 @@
         color: white;
     }
 
-    span {
-        font-weight: 400;
-        color: #DD0996FF;
-        font-style: italic;
-    }
-
     blockquote {
         color: #ff5a5a;
+        font-style: italic;
+        margin: 10px 0;
+    }
+
+    span {
+        font-weight: 400;
+        color: #C5560BFF;
         font-style: italic;
         margin: 10px 0;
     }
@@ -92,27 +93,20 @@
     <body>
         <div class="container">
             <div class="title">
-                <h1>Ancient Isle</h1>
+                <h1>Moosewood</h1>
             </div>
             <div class="content">
                 <div class="image">
-                    <img src="src\ensien aisl.png" alt="Ancient Isle">
+                    <img src="src\muswud.png" alt="Moosewood">
                 </div>
                 <div class="text">
                     <h2>Overview</h2>
                     <p>
-                    <span>Ancient Isle</span> is a large island surrounded by a series of much smaller islands located in the far east of the map, far out between <span>Snowcap Island</span> and <span>Mushgrove Swamp</span>. 
-                    as players approach the Ancient Isle, a warning message appears at the bottom of the screen:
-                    </p>
-                    <blockquote>
-                        "The sea is dangerous. Sail with caution."
-                    </blockquote>
-                    <p>
-Suddenly, hazards such as whirlpools, spikes, and barrels of dynamite emerge from the ocean floor, inflicting damage to the player's boat. The boat starts with 100 HP and will explode if its HP reaches zero.
-<br><br>Steering into a whirlpool will cause the boat to sink immediately, forcing the player to navigate the waters without a vessel. Other dangers inflict a HP reduction of 10.
-<br><br>To avoid losing your boat, start slowing down to about 10-25s/ps once you near Ancient Isle.
-<br><br>At the islands, players can purchase the <span>Phoenix Rod</span> and <span>Stone Rod</span> for C$40,000 and C$3,000 respectively.
-<br><br>The <span>Megalodon</span> usually spawns around the Ancient Isle.
+                        <span>Moosewood Village</span>, occasionally referred to as Moosewood, is the first island located in the Middle of the map and one of the five major islands in the game where newly joined players first spawn in. 
+                        <br><br>A guide by the name of <span>Pierre</span>, who is standing near the docks can teach you the basics of the game. There is also an occasional <span>Travelling Merchant</span> who sells high powered rods and loot. 
+                        <br><br>This island has coordinates 370, 134, 223.<br>
+                        There are multiple NPCs in this island, an occasionally mysterious one who appears near the lighthouse and the travelling merchant. A <span>Shipwright</span> can be seen near the docks, who is level locked to 5 before you can speak to him. Going up the slope brings you to the village central where you can see the game's gamepasses. 
+                        Go further and you should be able to see Phineas near the bench, speak to him and he gives you a quest to catch 10 fishes using bait. On the left is the Merchant's hut, the Appraiser and the Innkeeper, who you can buy a room from and set your spawn point. Buying a room from him sets your spawn point, every island has an innkeeper.
                     </p><br><br>
                 </div>
                 <table>

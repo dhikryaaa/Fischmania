@@ -28,7 +28,7 @@
     .title h1 {
         text-align: center;
         font-size: 2rem;
-        color: #DD0996FF;
+        color: #FFBB00FF;
         margin-bottom: 20px;
     }
 
@@ -40,7 +40,7 @@
     }
 
     .image img {
-        max-width: 100%;
+        width: 100%;
         border-radius: 10px;
         margin-bottom: 20px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
@@ -53,14 +53,15 @@
         color: white;
     }
 
-    span {
-        font-weight: 400;
-        color: #DD0996FF;
-        font-style: italic;
-    }
-
     blockquote {
         color: #ff5a5a;
+        font-style: italic;
+        margin: 10px 0;
+    }
+
+    span {
+        font-weight: 400;
+        color: #FFBB00FF;
         font-style: italic;
         margin: 10px 0;
     }
@@ -86,35 +87,27 @@
         color: white;
     }
     
-
     </style>
     </head>
     <body>
         <div class="container">
             <div class="title">
-                <h1>Ancient Isle</h1>
+                <h1>Forsaken Shores</h1>
             </div>
             <div class="content">
                 <div class="image">
-                    <img src="src\ensien aisl.png" alt="Ancient Isle">
+                    <img src="src\forsaken.png" alt="Depths">
                 </div>
                 <div class="text">
                     <h2>Overview</h2>
                     <p>
-                    <span>Ancient Isle</span> is a large island surrounded by a series of much smaller islands located in the far east of the map, far out between <span>Snowcap Island</span> and <span>Mushgrove Swamp</span>. 
-                    as players approach the Ancient Isle, a warning message appears at the bottom of the screen:
+                    <span>Forsaken Shores</span> is an island added on the 1.05.0 update. It is a part of the <span>Forsaken Shores Expansion Update</span>, the island is located southwest of Roslit Bay.
+                    <br><br>Its GPS coordinates: X: -2427, Y: 133, Z: 1557.
+                    <br><br>Upon arriving at the pirate-themed island, the player will see a skull shaped cave at the center with small sea stacks surrounding the island. A new merchant named Cort also inhabits the island. There is also a NPC named <span>Jack Marrow</span> in the skull shaped cave. You can repair your Treasure Map on him and buy the <span>Scurvy Rod</span>.
+                    <br><br>Forsaken Shores has 11 types of fish in total, 2 Common, 2 Uncommon, 2 Unusual, 2 Rare, 1 Legendary and 2 Mythical. Completing the Forsaken Shores Bestiary will grant the player the Pirate Wheel Bobber or Skull Bobber.
+                    <br><br>It is recommended to grind <span>Captain's Goldfish</span> in the pond under the waterfall using a rod with high luck stats such as Mythical Rod, or if you're a beginner, Fortune Rod, and to use Truffle Worms (their preferred bait). You can also grind these fish for good XP.
                     </p>
-                    <blockquote>
-                        "The sea is dangerous. Sail with caution."
-                    </blockquote>
-                    <p>
-Suddenly, hazards such as whirlpools, spikes, and barrels of dynamite emerge from the ocean floor, inflicting damage to the player's boat. The boat starts with 100 HP and will explode if its HP reaches zero.
-<br><br>Steering into a whirlpool will cause the boat to sink immediately, forcing the player to navigate the waters without a vessel. Other dangers inflict a HP reduction of 10.
-<br><br>To avoid losing your boat, start slowing down to about 10-25s/ps once you near Ancient Isle.
-<br><br>At the islands, players can purchase the <span>Phoenix Rod</span> and <span>Stone Rod</span> for C$40,000 and C$3,000 respectively.
-<br><br>The <span>Megalodon</span> usually spawns around the Ancient Isle.
-                    </p><br><br>
-                </div>
+                </div><br><br>
                 <table>
                     <thead>
                         <tr>
@@ -127,25 +120,25 @@ Suddenly, hazards such as whirlpools, spikes, and barrels of dynamite emerge fro
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- infokan backend min -->
-                        <!-- <?php
-                        $sql = "SELECT * FROM calon_siswa";
-                        $query = mysqli_query($db, $sql);
-        
-                        while($siswa = mysqli_fetch_array($query)){
-                            echo "<tr>";
-        
-                            echo "<td>".$siswa['fish_name']."</td>";
-                            echo "<td>".$siswa['appearance']."</td>";
-                            echo "<td>".$siswa['bait']."</td>";
-                            echo "<td>".$siswa['time']."</td>";
-                            echo "<td>".$siswa['weather']."</td>";
-                            echo "<td>".$siswa['season']."</td>";
-        
-                            echo "</tr>";
-                        }
-                        ?> -->
-        
+                    <!-- infokan backend min -->
+                    <!-- <?php
+                    $sql = "SELECT * FROM calon_siswa";
+                    $query = mysqli_query($db, $sql);
+    
+                    while($siswa = mysqli_fetch_array($query)){
+                        echo "<tr>";
+    
+                        echo "<td>".$siswa['fish_name']."</td>";
+                        echo "<td>".$siswa['appearance']."</td>";
+                        echo "<td>".$siswa['bait']."</td>";
+                        echo "<td>".$siswa['time']."</td>";
+                        echo "<td>".$siswa['weather']."</td>";
+                        echo "<td>".$siswa['season']."</td>";
+    
+                        echo "</tr>";
+                    }
+                    ?> -->
+    
                     </tbody>
                 </table>
             </div>
