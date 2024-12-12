@@ -8,66 +8,85 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
     <style>
-        body, html{
+        body, html {
             height: 100vh;
             width: 100%;
+            overflow-x: hidden;
             background: url(./src/bintang=ikan.png);
             font-family: "Martian Mono", monospace;
             font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
-            font-variation-settings:
-                "wdth" 100;
+            font-variation-settings: "wdth" 100;
+            background-color: #38393D;
         }
-        nav{
-            display:flex;
+
+        nav {
+            display: flex;
             flex-direction: row;
             justify-content: space-between;
             font-size: large;
             align-items: center;
             padding: 1em;
         }
-        nav a{
+
+        nav a {
             text-decoration: none;
             color: #FFFFFF;
             font-size: 2em;
         }
-        .authBtn{
-            color: #3F4149; 
-            background-color: #FFE44A; 
-            border: none; 
-            border-radius: 12px; 
+
+        .authBtn {
+            color: #3F4149;
+            background-color: #FFE44A;
+            border: none;
+            border-radius: 12px;
             padding: 1em 3em;
-            cursor: pointer; 
+            cursor: pointer;
         }
 
-        .authBtn a{
+        .authBtn a {
             color: #3F4149;
             font-size: 2em;
         }
-        h2{
+
+        h2 {
             font-size: 12px;
             color: #9A9A9A;
         }
 
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(2, 1fr); 
-            grid-template-rows: repeat(2, auto);
-            gap: 1em; 
-        } 
-            
-        .card { 
-            background-color: #3F4149; 
-            border-radius: 10px; 
-            overflow: hidden; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            padding: 1em; 
-            color: #FFFFFF; 
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, auto); /* Modified to allow grid items to grow */
+            gap: 1em;
         }
+
+        .card {
+            background-color: #3F4149;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #FFFFFF;
+        }
+
+        .top-image {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .top-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .text-description {
+            padding: 1em;
+        }
+
     </style>
 </head>
 <body>
