@@ -85,6 +85,39 @@ The Megalodon usually spawns around the Ancient Isle.
                     </p>
                 </div>
             </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fish Name</th>
+                        <th>Appearance</th>
+                        <th>Bait</th>
+                        <th>Time</th>
+                        <th>Weather</th>
+                        <th>Season</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- infokan backend min -->
+                    <?php
+                    $sql = "SELECT * FROM calon_siswa";
+                    $query = mysqli_query($db, $sql);
+    
+                    while($siswa = mysqli_fetch_array($query)){
+                        echo "<tr>";
+    
+                        echo "<td>".$siswa['fish_name']."</td>";
+                        echo "<td>".$siswa['appearance']."</td>";
+                        echo "<td>".$siswa['bait']."</td>";
+                        echo "<td>".$siswa['time']."</td>";
+                        echo "<td>".$siswa['weather']."</td>";
+                        echo "<td>".$siswa['season']."</td>";
+    
+                        echo "</tr>";
+                    }
+                    ?>
+    
+                </tbody>
+            </table>
         </div>
     </body>
 </html>
