@@ -72,7 +72,6 @@
             align-items: center;
             color: #FFFFFF;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-
         }
         
         .card:hover {
