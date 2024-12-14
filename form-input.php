@@ -70,7 +70,7 @@
             gap: 10px;
         }
 
-        input[type="button"] {
+        input[type="submit"] {
             margin-top: 10px;
             padding: 10px 20px;
             background-color: #FFE44A;
@@ -119,7 +119,7 @@
     </style>
 </head>
 <body>
-    <form action="#" method="POST" enctype="multipart/form-data" class="card">
+    <form action="proses-input.php" method="POST" enctype="multipart/form-data" class="card">
         <div class="card-left">
             <label for="fish-name"><p>Fish Name</p></label>
             <input type="text" name="fish-name" required>
@@ -138,23 +138,7 @@
         <div class="card-right">
             <label for="location" style="text-shadow: 2px 2px 2px #222222;">Location</label><br>
             <div class="scrollable-part">
-                <div class="minicard" data-location="Ancient Isle">
-                    <div class="imagepart">
-                        <img src="src/ensien aisl.png" alt="Ancient Isle">
-                    </div>
-                    <div class="textpart">
-                        <p>Ancient Isle</p>
-                    </div>
-                </div>
-                <div class="minicard" data-location="The Depths">
-                    <div class="imagepart">
-                        <img src="src/depths.png" alt="The Depths">
-                    </div>
-                    <div class="textpart">
-                        <p>The Depths</p>
-                    </div>
-                </div>
-                <div class="ancient-isle minicard">
+                <div class="ancient-isle minicard" data-location="Ancient Isle">
                     <div class="imagepart">
                         <img src="src/ensien aisl.png">
                     </div>
@@ -162,7 +146,7 @@
                         <p>Ancient Isle</p>
                     </div>
                 </div>
-                <div class="the-depths minicard">
+                <div class="the-depths minicard" data-location="The Depths">
                     <div class="imagepart">
                         <img src="src/depths.png">
                     </div>
@@ -170,7 +154,7 @@
                         <p>The Depths</p>
                     </div>
                 </div>
-                <div class="muswud minicard">
+                <div class="muswud minicard" data-location="Moosewood">
                     <div class="imagepart">
                         <img src="src/muswud.png">
                     </div>
@@ -178,7 +162,7 @@
                         <p>Moosewood</p>
                     </div>
                 </div>
-                <div class="roslit minicard">
+                <div class="roslit minicard" data-location="Roslit Bay">
                     <div class="imagepart">
                         <img src="src/roslit.png">
                     </div>
@@ -186,7 +170,7 @@
                         <p>Roslit Bay</p>
                     </div>
                 </div>
-                <div class="forsaken minicard">
+                <div class="forsaken minicard" data-location="Forsaken Shores">
                     <div class="imagepart">
                         <img src="src/forsaken.png">
                     </div>
@@ -194,7 +178,7 @@
                         <p>Forsaken Shores</p>
                     </div>
                 </div>
-                <div class="desolate minicard">
+                <div class="desolate minicard" data-location="Desolate Deep">
                     <div class="imagepart">
                         <img src="src/desolate.png">
                     </div>
@@ -202,7 +186,7 @@
                         <p>Desolate Deep</p>
                     </div>
                 </div>
-                <div class="vertigo minicard">
+                <div class="vertigo minicard" data-location="The Vertigo">
                     <div class="imagepart">
                         <img src="src/vertigo.png">
                     </div>
@@ -210,7 +194,7 @@
                         <p>The Vertigo</p>
                     </div>
                 </div>
-                <div class="snowcap minicard">
+                <div class="snowcap minicard" data-location="Snowcap Island">
                     <div class="imagepart">
                         <img src="src/snowcap.png">
                     </div>
@@ -219,7 +203,7 @@
                     </div>
             </div>
         </div>
-        <input type="button" value="Submit" onclick="submitForm()" class="submitbtn">
+        <input type="submit" name="submit" value="Submit" onclick="submitForm()" class="submitbtn">
     </form>
 
     <script>
