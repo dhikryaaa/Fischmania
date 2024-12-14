@@ -11,7 +11,7 @@
     <style>
         body, html {
             height: 100vh;
-            width: 100%;
+            width: 100vw;   
             overflow-x: hidden;
             background: url(./src/bintang=ikan.png);
             font-family: "Martian Mono", monospace;
