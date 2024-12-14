@@ -36,26 +36,14 @@
             justify-content: space-evenly;
         }
 
-        .card-left, .card-right {
-            width: 40%;
+        .card-left {
+            width: auto;
             padding: 10px;
             box-sizing: border-box;
         }
 
         .card-left label{
             text-shadow: 2px 2px 2px #222222;
-        }
-
-        .card-right .textpart{
-            background-color: #222222;
-            display: flex; /* Ensures it can grow/shrink to fit its container */
-            justify-content: center; /* Centers text horizontally */
-            align-items: center; /* Centers text vertically */
-        }
-
-        .card-right {
-            display: flex;
-            flex-direction: column;
         }
         
         img{
@@ -121,7 +109,7 @@
 </head>
 <body>
     <form action="proses-edit.php" method="POST" enctype="multipart/form-data" class="card">
-        < class="card-left">
+        <div class="card-left">
             <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>">
 
             <label for="name"><p>Email</p></label>
