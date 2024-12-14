@@ -1,3 +1,7 @@
+<?php
+include("config.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,24 +133,24 @@ Suddenly, hazards such as whirlpools, spikes, and barrels of dynamite emerge fro
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- infokan backend min -->
-                        <!-- <?php
-                        $sql = "SELECT * FROM calon_siswa";
-                        $query = mysqli_query($db, $sql);
-        
-                        while($siswa = mysqli_fetch_array($query)){
+
+                        <?php
+                        $sql = "SELECT * FROM `ikan` WHERE location = 'Ancient Isle'";
+                        $query = mysqli_query($connect, $sql);
+
+                        while($ikan = mysqli_fetch_array($query)){
                             echo "<tr>";
         
-                            echo "<td>".$siswa['fish_name']."</td>";
-                            echo "<td>".$siswa['appearance']."</td>";
-                            echo "<td>".$siswa['bait']."</td>";
-                            echo "<td>".$siswa['time']."</td>";
-                            echo "<td>".$siswa['weather']."</td>";
-                            echo "<td>".$siswa['season']."</td>";
+                            echo "<td>".$ikan['name']."</td>";
+                            echo "<td><img src='gambarikan/".$ikan['appearance']."' width='150' height='100'></td>";
+                            echo "<td>".$ikan['bait']."</td>";
+                            echo "<td>".$ikan['time']."</td>";
+                            echo "<td>".$ikan['weather']."</td>";
+                            echo "<td>".$ikan['season']."</td>";
         
                             echo "</tr>";
                         }
-                        ?> -->
+                        ?>
         
                     </tbody>
                 </table>
