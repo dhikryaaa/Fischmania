@@ -12,18 +12,28 @@ if(isset($_POST['login'])){
 
     $data = mysqli_num_rows($query);
 
-    if($data > 0){
-        $arr = mysqli_fetch_assoc($query);
-
-        session_start();
-        $_SESSION['id'] = session_id();
-        $_SESSION['email'];
-        $_SESSION['usertype'];
-
-        header("Location: index.php");
+    if($query){
+        if($data > 0){
+            $arr = mysqli_fetch_assoc($query);
+    
+            session_start();
+            $_SESSION['id'] = session_id();
+            $_SESSION['email'];
+            $_SESSION['usertype'];
+    
+            if($arr['usertype'] == 1){
+                header("Location: desbord-mimin.php");
+            }
+            else if($arr['usertype'] == 0){
+                header("Location: index.php");
+            }
+        }
+        else{
+            echo "<script> alert('Email atau Password salah.'); window.location.assign('form-pendaftaran.php'); </script>";
+        }
     }
     else{
-        echo "<script> alert('Email atau Password salah.'); window.location.assign('form-pendaftaran.php'); </script>";
+        echo "<script> alert('Gagal melakukan Login, Coba kembali.'); window.location.assign('form-pendaftaran.php'); </script>";
     }
 }
 

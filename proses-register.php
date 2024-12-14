@@ -14,17 +14,24 @@ if(isset($_POST['register'])){
     else{
         //check same email
         $sql = "SELECT * FROM users WHERE email = '$email'; ";
+
         $query = mysqli_query($connect, $sql);
 
         $data = mysqli_num_rows($query);
 
-        if($data > 0){
-            echo "<script> alert('Email telah digunakan.'); window.location.assign('form-pendaftaran.php'); </script>";
+        if($query){
+            if($data > 0){
+                echo "<script> alert('Email telah digunakan.'); window.location.assign('form-pendaftaran.php'); </script>";
+            }
+            else{
+                $sql = "INSERT INTO users (email, password) VALUES ('$email', '$password'); ";
+                $query = mysqli_query($connect, $sql);
+                echo "<script> alert('Silahkan Login menggunakan email yang telah di daftarkan.'); window.location.assign('form-pendaftaran.php'); </script>";
+            }
         }
         else{
-            $sql = "INSERT INTO users (email, password) VALUES ('$email', '$password'); ";
-            $query = mysqli_query($connect, $sql);
-            echo "<script> alert('Silahkan Login menggunakan email yang telah di daftarkan.'); window.location.assign('form-pendaftaran.php'); </script>";
+            echo "<script> alert('Gagal melakukan Registrasi, Coba kembali.'); window.location.assign('form-pendaftaran.php'); </script>";
+
         }
     }
 }
