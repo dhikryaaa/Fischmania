@@ -26,6 +26,27 @@ include("config.php");
             display: flex;
             justify-content: center;
         }
+
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            padding: 8px;
+            text-align: left;
+            background-color: #FFE44A;
+            color: black;
+            border: 1px solid black;
+        }
+
+        tr:nth-child(even){background-color: #313131FF;}
+        
+        td {
+            border: 1px solid #1A1A1AFF;
+            padding: 8px;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -62,7 +83,7 @@ include("config.php");
                 echo "<td>".$ikan['season']."</td>";
 
                 echo "<td>";
-                echo "<a href='' class='button-blue'>Edit</a> | ";
+                echo "<a href='./form-edit.php' class='button-blue'>Edit</a> | ";
                 echo "<a href='' class='button-red' onclick='return confirmDelete()'>Hapus</a>";
                 echo "</td>";
 

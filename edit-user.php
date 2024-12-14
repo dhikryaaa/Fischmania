@@ -26,11 +26,32 @@ include("config.php");
             display: flex;
             justify-content: center;
         }
+
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            padding: 8px;
+            text-align: left;
+            background-color: #FFE44A;
+            color: black;
+            border: 1px solid black;
+        }
+
+        tr:nth-child(even){background-color: #313131FF;}
+        
+        td {
+            border: 1px solid #1A1A1AFF;
+            padding: 8px;
+            color: white;
+        }
     </style>
 </head>
 <body>
 <header>
-        <h3>Fish List</h3>
+        <h3>User List</h3>
     </header>
 
     <table>
