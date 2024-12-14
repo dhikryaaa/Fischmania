@@ -29,16 +29,21 @@
             max-width: 800px;
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             background-color: #3F4149;
             padding: 20px;
             position: relative;
+            justify-content: space-evenly;
         }
 
         .card-left, .card-right {
             width: 40%;
             padding: 10px;
             box-sizing: border-box;
+        }
+
+        .card-left label{
+            text-shadow: 2px 2px 2px #222222;
         }
 
         .card-right .textpart{
@@ -82,6 +87,7 @@
         }
         
         .minicard {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             cursor: pointer; 
             transition: transform 0.2s, box-shadow 0.2s; 
         }
@@ -97,6 +103,18 @@
             box-shadow: 0 4px 10px rgba(255, 228, 74, 0.5); 
         }
 
+        input[type='text'] {
+            border-radius: 4px;
+            border: 3px solid #555555;
+            outline: none;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+
+        }
+
+        input[type='text']:focus {
+            border: 3px solid #222222
+        }
 
     </style>
 </head>
@@ -118,7 +136,7 @@
             <input type="hidden" name="location" id="selected-location">
         </div>
         <div class="card-right">
-            <label for="location">Location</label>
+            <label for="location" style="text-shadow: 2px 2px 2px #222222;">Location</label><br>
             <div class="scrollable-part">
                 <div class="minicard" data-location="Ancient Isle">
                     <div class="imagepart">
