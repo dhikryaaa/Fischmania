@@ -18,7 +18,6 @@
             font-weight: 400;
             font-style: normal;
             font-variation-settings: "wdth" 100;
-            background-color: #38393D;
         }
 
         nav {
