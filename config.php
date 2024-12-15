@@ -6,7 +6,13 @@
 
     $connect = mysqli_connect($server, $user, $password, $db_name);
 
-    if(!$connect){
-        die("Connection Failed". mysqli_connect_error());
+    if (isset($_GET['fischmania'])) {
+        if(!$connect){
+            die("Connection Failed". mysqli_connect_error());
+        }
+        else {
+            echo "Database not connected (for now).";
+        }
     }
+
 ?>

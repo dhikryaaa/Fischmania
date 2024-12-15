@@ -31,7 +31,6 @@ if(isset($_POST['register'])){
         }
         else{
             echo "<script> alert('Gagal melakukan Registrasi, Coba kembali.'); window.location.assign('form-pendaftaran.php'); </script>";
-
         }
     }
 }

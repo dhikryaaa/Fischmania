@@ -1,9 +1,30 @@
+<?php
+include("config.php");
+
+if(!isset($_GET['id'])){
+    header('Location: edit-ikan.php');
+}
+
+$id = $_GET['id'];
+
+$sql = "SELECT * FROM users WHERE id = $id";
+
+$query = mysqli_query($connect, $sql);
+$user = mysqli_fetch_assoc($query);
+$data = mysqli_num_rows($query);
+
+if($data < 1){
+    die("Data Ikan tidak ditemukan");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulir Edit Siswa</title>
+    <title>Formulir Edit User</title>
     <style>
         body, html {
             margin: 0;
@@ -108,18 +129,20 @@
     </style>
 </head>
 <body>
-    <form action="proses-edit.php" method="POST" enctype="multipart/form-data" class="card">
+    <form action="proses-edituser.php" method="POST" enctype="multipart/form-data" class="card">
         <div class="card-left">
-            <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>">
+            <input type="hidden" name="id" value="<?php echo $user['id'] ?>">
 
             <label for="name"><p>Email</p></label>
-            <input type="text" name="name" value="<?php echo $siswa['email'] ?>">
+            <input type="text" name="email" value="<?php echo $user['email'] ?>">
 
-            <label for="password"><p>Password</p></label>
-            <input type="password" name="password" value="<?php echo $siswa['password'] ?>">
+            <label for="password"><p>Update Password</p></label>
+            <input type="password" name="password">
 
-            <label for="usertype"><p>Usertype</p></label>
-            <input type="text" name="usertype" value="<?php echo $siswa['usertype'] ?>">
+            <label for="password"><p>Confirm Password</p></label>
+            <input type="password" name="confirm-password">
+
+            <input type="submit" name="simpan" value="Update">
         </div>
     </form>
 </body>

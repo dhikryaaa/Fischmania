@@ -66,7 +66,8 @@ include("config.php");
     </style>
 </head>
 <body>
-<header>
+    <div class="card">
+    <header>
         <h3>User List</h3>
     </header>
 
@@ -76,6 +77,7 @@ include("config.php");
             <th>Email</th>
             <th>Password</th>
             <th>Usertype</th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>
@@ -94,7 +96,7 @@ include("config.php");
                 echo "<td>".$usertype."</td>";
 
                 echo "<td>";
-                echo "<a href='' class='button-blue'>Edit</a> | ";
+                echo "<a href='form-edituser.php?id=".$user['id']."' class='button-blue'>Edit</a> | ";
                 echo "<a href='' class='button-red' onclick='return confirmDelete()'>Hapus</a>";
                 echo "</td>";
 
@@ -106,5 +108,6 @@ include("config.php");
 
     <p style="text-align: center;">Total: <?php echo mysqli_num_rows($query) ?></p>
 
+    </div>
 </body>
 </html>

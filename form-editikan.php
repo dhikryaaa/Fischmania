@@ -1,9 +1,30 @@
+<?php
+include("config.php");
+
+if(!isset($_GET['id'])){
+    header('Location: edit-ikan.php');
+}
+
+$id = $_GET['id'];
+
+$sql = "SELECT * FROM ikan WHERE id = $id";
+
+$query = mysqli_query($connect, $sql);
+$ikan = mysqli_fetch_assoc($query);
+$data = mysqli_num_rows($query);
+
+if($data < 1){
+    die("Data Ikan tidak ditemukan");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulir Edit Siswa</title>
+    <title>Formulir Edit Ikan</title>
     <style>
         body, html {
             margin: 0;
@@ -120,104 +141,66 @@
     </style>
 </head>
 <body>
-    <form action="proses-edit.php" method="POST" enctype="multipart/form-data" class="card">
+    <form action="proses-editikan.php" method="POST" enctype="multipart/form-data" class="card">
         <div class="card-left">
-            <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>">
+            <input type="hidden" name="id" value="<?php echo $ikan['id'] ?>">
 
             <label for="name"><p>Fish Name</p></label>
-            <input type="text" name="name" placeholder="nama ikan" value="<?php echo $siswa['name'] ?>">
+            <input type="text" name="name" placeholder="nama ikan" value="<?php echo $ikan['name'] ?>">
 
             <label for="appearance"><p>Appearance</p></label>
             <div>
                 <!-- Display the current image -->
-                <?php if (!empty($siswa['appearance'])): ?>
-                    <img src="<?php echo $siswa['appearance']; ?>" alt="Current Appearance" style="max-width: 200px; display: block; margin-bottom: 10px;">
+                <?php if (!empty($ikan['appearance'])): ?>
+                    <img src="gambarikan/<?php echo $ikan['appearance']; ?>" alt="Current Appearance" style="max-width: 200px; display: block; margin-bottom: 10px;">
                 <?php else: ?>
                     <p>No image uploaded</p>
                 <?php endif; ?>
 
                 <!-- Input for uploading a new image -->
-                <input type="file" name="appearance" accept="image/*">
+                <input type="file" name="appearance" accept="gambarikan/">
             </div>
 
             <label for="bait"><p>Bait</p></label>
-            <input type="text" name="bait" value="<?php echo $siswa['bait'] ?>">
+            <input type="text" name="bait" value="<?php echo $ikan['bait'] ?>">
 
             <label for="time"><p>Time</p></label>
-            <input type="text" name="time" value="<?php echo $siswa['time'] ?>">
+            <input type="text" name="time" value="<?php echo $ikan['time'] ?>">
 
             <label for="weather"><p>Weather</p></label>
-            <input type="text" name="weather" value="<?php echo $siswa['weather'] ?>">
+            <input type="text" name="weather" value="<?php echo $ikan['weather'] ?>">
 
             <label for="season"><p>Season</p></label>
-            <input type="text" name="season" value="<?php echo $siswa['season'] ?>">
+            <input type="text" name="season" value="<?php echo $ikan['season'] ?>">
         </div>
         <div class="card-right">
             <div class="scrollable-part">
-                <div class="ancient-isle minicard" data-location="Ancient Isle">
-                    <div class="imagepart">
-                        <img src="src/ensien aisl.png">
+                <?php
+                $locations = [
+                    "Ancient Isle" => "src/ensien aisl.png",
+                    "The Depths" => "src/depths.png",
+                    "Moosewood" => "src/muswud.png",
+                    "Roslit Bay" => "src/roslit.png",
+                    "Forsaken Shores" => "src/forsaken.png",
+                    "Desolate Deep" => "src/desolate.png",
+                    "The Vertigo" => "src/vertigo.png",
+                    "Snowcap Island" => "src/snowcap.png",
+                ];
+
+                foreach ($locations as $location => $image) {
+                    $selectedClass = ($ikan['location'] === $location) ? 'selected' : '';
+                    echo "
+                    <div class='minicard $selectedClass' data-location='$location'>
+                        <div class='imagepart'>
+                            <img src='$image'>
+                        </div>
+                        <div class='textpart'>
+                            <p>$location</p>
+                        </div>
                     </div>
-                    <div class="textpart">
-                        <p>Ancient Isle</p>
-                    </div>
-                </div>
-                <div class="the-depths minicard" data-location="The Depths">
-                    <div class="imagepart">
-                        <img src="src/depths.png">
-                    </div>
-                    <div class="textpart">
-                        <p>The Depths</p>
-                    </div>
-                </div>
-                <div class="muswud minicard" data-location="Moosewood">
-                    <div class="imagepart">
-                        <img src="src/muswud.png">
-                    </div>
-                    <div class="textpart">
-                        <p>Moosewood</p>
-                    </div>
-                </div>
-                <div class="roslit minicard" data-location="Roslit Bay">
-                    <div class="imagepart">
-                        <img src="src/roslit.png">
-                    </div>
-                    <div class="textpart">
-                        <p>Roslit Bay</p>
-                    </div>
-                </div>
-                <div class="forsaken minicard" data-location="Forsaken Shores">
-                    <div class="imagepart">
-                        <img src="src/forsaken.png">
-                    </div>
-                    <div class="textpart">
-                        <p>Forsaken Shores</p>
-                    </div>
-                </div>
-                <div class="desolate minicard" data-location="Desolate Deep">
-                    <div class="imagepart">
-                        <img src="src/desolate.png">
-                    </div>
-                    <div class="textpart">
-                        <p>Desolate Deep</p>
-                    </div>
-                </div>
-                <div class="vertigo minicard" data-location="The Vertigo">
-                    <div class="imagepart">
-                        <img src="src/vertigo.png">
-                    </div>
-                    <div class="textpart">
-                        <p>The Vertigo</p>
-                    </div>
-                </div>
-                <div class="snowcap minicard" data-location="Snowcap Island">
-                    <div class="imagepart">
-                        <img src="src/snowcap.png">
-                    </div>
-                    <div class="textpart">
-                        <p>Snowcap Island</p>
-                    </div>
-                </div>
+                    ";
+                }
+                ?>
             </div>
             <input type="hidden" name="location" id="selected-location">
             <input type="submit" value="Simpan" name="simpan" onclick="submitForm()">
@@ -226,6 +209,7 @@
     </form>
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
         const minicards = document.querySelectorAll('.minicard');
         const selectedLocationInput = document.getElementById('selected-location');
 
@@ -234,19 +218,19 @@
                 minicards.forEach(c => c.classList.remove('selected'));
 
                 card.classList.add('selected');
-
                 selectedLocationInput.value = card.dataset.location;
             });
         });
 
-        function submitForm() {
-            if (!selectedLocationInput.value) {
-                alert('Please select a location!');
-                return;
+        // Saat halaman dimuat, pilih lokasi lama
+        const savedLocation = selectedLocationInput.value;
+        if (savedLocation) {
+            const selectedCard = [...minicards].find(card => card.dataset.location === savedLocation);
+            if (selectedCard) {
+                selectedCard.classList.add('selected');
             }
-
-            document.querySelector('form').submit();
         }
+    });
     </script>
 </body>
 </html>
