@@ -123,7 +123,7 @@
             <label for="fish-name"><p>Fish Name</p></label>
             <input type="text" name="fish-name" required>
             <label for="appearance"><p>Appearance</p></label>
-            <input type="file" name="appearance" accept="image/*" required>
+            <input type="file" name="appearance" accept="gambarikan/" required>
             <label for="bait"><p>Bait</p></label>
             <input type="text" name="bait" required>
             <label for="time"><p>Time</p></label>

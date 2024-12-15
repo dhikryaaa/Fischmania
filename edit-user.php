@@ -64,6 +64,11 @@ include("config.php");
             color: white;
         }
     </style>
+    <script type="text/javascript">
+        function confirmDelete() {
+            return confirm("Apakah Anda yakin ingin menghapus data ini?");
+        }
+    </script>
 </head>
 <body>
     <div class="card">
@@ -97,7 +102,7 @@ include("config.php");
 
                 echo "<td>";
                 echo "<a href='form-edituser.php?id=".$user['id']."' class='button-blue'>Edit</a> | ";
-                echo "<a href='' class='button-red' onclick='return confirmDelete()'>Hapus</a>";
+                echo "<a href='hapus-user.php?id=".$user['id']."' class='button-red' onclick='return confirmDelete()'>Hapus</a>";
                 echo "</td>";
 
                 echo "</tr>";
