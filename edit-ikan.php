@@ -68,51 +68,51 @@ include("config.php");
 <body>
     <div class="card">
 
+        <header>
+            <h3>Fish List</h3>
+        </header>
+    
+        <table>
+            <thead>
+            <tr>
+                <th>Fish Name</th>
+                <th>Appearance</th>
+                <th>Bait</th>
+                <th>Time</th>
+                <th>Weather</th>
+                <th>Season</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                <?php
+                $sql = "SELECT * FROM ikan";
+    
+                $query = mysqli_query($connect, $sql);
+    
+                while($ikan = mysqli_fetch_array($query)){
+                    echo "<tr>";
+    
+                    echo "<td>".$ikan['name']."</td>";
+                    echo "<td><img src='gambarikan/".$ikan['appearance']."' width='100' height='100'></td>";
+                    echo "<td>".$ikan['bait']."</td>";
+                    echo "<td>".$ikan['time']."</td>";
+                    echo "<td>".$ikan['weather']."</td>";
+                    echo "<td>".$ikan['season']."</td>";
+    
+                    echo "<td>";
+                    echo "<a href='./form-edit.php' class='button-blue'>Edit</a> | ";
+                    echo "<a href='' class='button-red' onclick='return confirmDelete()'>Hapus</a>";
+                    echo "</td>";
+    
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+    
+        <p style="text-align: center;">Total: <?php echo mysqli_num_rows($query) ?></p>
     </div>
-    <header>
-        <h3>Fish List</h3>
-    </header>
-
-    <table>
-        <thead>
-        <tr>
-            <th>Fish Name</th>
-            <th>Appearance</th>
-            <th>Bait</th>
-            <th>Time</th>
-            <th>Weather</th>
-            <th>Season</th>
-            <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-            <?php
-            $sql = "SELECT * FROM ikan";
-
-            $query = mysqli_query($connect, $sql);
-
-            while($ikan = mysqli_fetch_array($query)){
-                echo "<tr>";
-
-                echo "<td>".$ikan['name']."</td>";
-                echo "<td><img src='gambarikan/".$ikan['appearance']."' width='100' height='100'></td>";
-                echo "<td>".$ikan['bait']."</td>";
-                echo "<td>".$ikan['time']."</td>";
-                echo "<td>".$ikan['weather']."</td>";
-                echo "<td>".$ikan['season']."</td>";
-
-                echo "<td>";
-                echo "<a href='./form-edit.php' class='button-blue'>Edit</a> | ";
-                echo "<a href='' class='button-red' onclick='return confirmDelete()'>Hapus</a>";
-                echo "</td>";
-
-                echo "</tr>";
-            }
-            ?>
-        </tbody>
-    </table>
-
-    <p style="text-align: center;">Total: <?php echo mysqli_num_rows($query) ?></p>
 
 </body>
 </html>
