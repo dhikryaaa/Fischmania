@@ -107,7 +107,7 @@
     <nav>
         <img src="./src/fischmania-logo 1.png">
         <a href="#">Home</a>
-        <a href="#">Explore</a>
+        <a href="#">Contribute</a>
         <button class="authBtn"><a href="./form-pendaftaran.php">Sign In</a></button>
     </nav>
     <main>
