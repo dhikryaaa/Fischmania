@@ -27,6 +27,22 @@ include("config.php");
             justify-content: center;
         }
 
+        .card {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            gap: 10px;
+            max-width: 800px; 
+            height: auto;
+            background-color: #3F4149;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
         table{
             border-collapse: collapse;
             width: 100%;
@@ -50,6 +66,9 @@ include("config.php");
     </style>
 </head>
 <body>
+    <div class="card">
+
+    </div>
     <header>
         <h3>Fish List</h3>
     </header>
