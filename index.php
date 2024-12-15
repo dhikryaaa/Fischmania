@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,16 +105,40 @@
             padding: 1em;
         }
 
+        .welcome-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 20px;
+            color:#FFFFFF;
+        }
+
     </style>
 </head>
 <body>
     <nav>
-        <img src="./src/fischmania-logo 1.png">
+    <img src="./src/fischmania-logo 1.png">
         <a href="index.php">Home</a>
-        <a href="form-input.php">Contribute</a>
-        <button class="authBtn"><a href="./form-pendaftaran.php">Sign In</a></button>
+        <?php if(isset($_SESSION['id'])): ?>
+            <!-- Contribute Link for Logged-In Users -->
+            <a href="form-input.php">Contribute</a>
+            <button class="authBtn"><a href="proses-logout.php">Log Out</a></button>
+        <?php else: ?>
+            <a href="form-pendaftaran.php">Contribute</a>
+            <button class="authBtn"><a href="form-pendaftaran.php">Sign In</a></button>
+        <?php endif; ?>
     </nav>
     <main>
+        <div class="welcome-container">
+            <?php if(isset($_SESSION['email'])): ?>
+                <h1>Welcome, <?php echo htmlspecialchars($_SESSION['email']); ?>!</h1>
+            <?php else: ?>
+                <h1>Welcome to Fischmania!</h1>
+            <?php endif; ?>
+        </div>
+
         <div class="grid">
 
             <a href="moosewood.php" class="link-card">

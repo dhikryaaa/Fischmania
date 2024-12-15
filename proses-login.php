@@ -17,9 +17,9 @@ if(isset($_POST['login'])){
             $arr = mysqli_fetch_assoc($query);
     
             session_start();
-            $_SESSION['id'] = session_id();
-            $_SESSION['email'];
-            $_SESSION['usertype'];
+            $_SESSION['id'] = $arr['id'];
+            $_SESSION['email'] = $arr['email'];
+            $_SESSION['usertype'] = $arr['usertype'];
     
             if($arr['usertype'] == 1){
                 header("Location: desbord-mimin.php");
