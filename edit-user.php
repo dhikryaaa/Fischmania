@@ -60,6 +60,7 @@ include("config.php");
             <th>Email</th>
             <th>Password</th>
             <th>Usertype</th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>

@@ -93,7 +93,6 @@ include("config.php");
         color: white;
     }
     
-
     </style>
     </head>
     <body>
