@@ -124,6 +124,11 @@ session_start();
         <?php if(isset($_SESSION['id'])): ?>
             <!-- Contribute Link for Logged-In Users -->
             <a href="form-input.php">Contribute</a>
+
+            <?php if ($_SESSION['usertype'] == 1): ?>
+                <a href="desbord-mimin.php">Dashboard</a>
+            <?php endif; ?>
+
             <button class="authBtn"><a href="proses-logout.php">Log Out</a></button>
         <?php else: ?>
             <a href="form-pendaftaran.php">Contribute</a>

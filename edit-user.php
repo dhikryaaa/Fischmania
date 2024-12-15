@@ -12,10 +12,9 @@ include("config.php");
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
     <style>
-        body,html{
+        body, html {
             width: 100%;
             height: 100vh;
-            font-family: Arial, sans-serif;
             font-family: "Martian Mono", monospace;
             font-optical-sizing: auto;
             font-weight: 400;
@@ -49,13 +48,12 @@ include("config.php");
             color: #3F4149;
             border: none;
             border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 5px 10px;
+            font-size: 14px;
             font-weight: bold;
             text-decoration: none;
             text-align: center;
             cursor: pointer;
-            margin-bottom: 20px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
@@ -64,7 +62,27 @@ include("config.php");
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        table{
+        .btn-red {
+            display: inline-block;
+            background-color: #FF4A4A;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-red:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        table {
             border-collapse: collapse;
             width: 100%;
         }
@@ -77,8 +95,8 @@ include("config.php");
             border: 1px solid black;
         }
 
-        tr:nth-child(even){background-color: #313131FF;}
-        
+        tr:nth-child(even) { background-color: #313131FF; }
+
         td {
             border: 1px solid #1A1A1AFF;
             padding: 8px;
@@ -111,17 +129,17 @@ include("config.php");
 
                 $query = mysqli_query($connect, $sql);
 
-                while($user = mysqli_fetch_array($query)){
+                while ($user = mysqli_fetch_array($query)) {
                     $usertype = ($user['usertype'] == 1) ? "Admin" : "User";
 
                     echo "<tr>";
 
-                    echo "<td>".$user['email']."</td>";
-                    echo "<td>".$usertype."</td>";
+                    echo "<td>" . $user['email'] . "</td>";
+                    echo "<td>" . $usertype . "</td>";
 
                     echo "<td>";
-                    echo "<a href='form-edituser.php?id=".$user['id']."' class='button-blue'>Edit</a> | ";
-                    echo "<a href='hapus-user.php?id=".$user['id']."' class='button-red' onclick='return confirmDelete()'>Hapus</a>";
+                    echo "<a href='form-edituser.php?id=" . $user['id'] . "' class='btn-yellow'>Edit</a> ";
+                    echo "<a href='hapus-user.php?id=" . $user['id'] . "' class='btn-red' onclick='return confirmDelete()'>Delete</a>";
                     echo "</td>";
 
                     echo "</tr>";
