@@ -43,6 +43,27 @@ include("config.php");
             padding: 20px;
         }
 
+        .btn-yellow {
+            display: inline-block;
+            background-color: #FFE44A;
+            color: #3F4149;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-yellow:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
         table{
             border-collapse: collapse;
             width: 100%;
@@ -72,7 +93,6 @@ include("config.php");
 </head>
 <body>
     <div class="card">
-
         <header>
             <h3>Fish List</h3>
         </header>
@@ -117,7 +137,8 @@ include("config.php");
         </table>
     
         <p style="text-align: center;">Total: <?php echo mysqli_num_rows($query) ?></p>
+        <br>
+        <a href="pdf-ikan.php" class="btn-yellow">Print PDF</a>
     </div>
-
 </body>
 </html>

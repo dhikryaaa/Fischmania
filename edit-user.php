@@ -43,6 +43,27 @@ include("config.php");
             padding: 20px;
         }
 
+        .btn-yellow {
+            display: inline-block;
+            background-color: #FFE44A;
+            color: #3F4149;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-yellow:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
         table{
             border-collapse: collapse;
             width: 100%;
@@ -72,47 +93,46 @@ include("config.php");
 </head>
 <body>
     <div class="card">
-    <header>
-        <h3>User List</h3>
-    </header>
+        <header>
+            <h3>User List</h3>
+        </header>
 
-    <table>
-        <thead>
-        <tr>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Usertype</th>
-            <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-            <?php
-            $sql = "SELECT * FROM users";
+        <table>
+            <thead>
+            <tr>
+                <th>Email</th>
+                <th>Usertype</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                <?php
+                $sql = "SELECT * FROM users";
 
-            $query = mysqli_query($connect, $sql);
+                $query = mysqli_query($connect, $sql);
 
-            while($user = mysqli_fetch_array($query)){
-                $usertype = ($user['usertype'] == 1) ? "Admin" : "User";
+                while($user = mysqli_fetch_array($query)){
+                    $usertype = ($user['usertype'] == 1) ? "Admin" : "User";
 
-                echo "<tr>";
+                    echo "<tr>";
 
-                echo "<td>".$user['email']."</td>";
-                echo "<td>".$user['password']."</td>";
-                echo "<td>".$usertype."</td>";
+                    echo "<td>".$user['email']."</td>";
+                    echo "<td>".$usertype."</td>";
 
-                echo "<td>";
-                echo "<a href='form-edituser.php?id=".$user['id']."' class='button-blue'>Edit</a> | ";
-                echo "<a href='hapus-user.php?id=".$user['id']."' class='button-red' onclick='return confirmDelete()'>Hapus</a>";
-                echo "</td>";
+                    echo "<td>";
+                    echo "<a href='form-edituser.php?id=".$user['id']."' class='button-blue'>Edit</a> | ";
+                    echo "<a href='hapus-user.php?id=".$user['id']."' class='button-red' onclick='return confirmDelete()'>Hapus</a>";
+                    echo "</td>";
 
-                echo "</tr>";
-            }
-            ?>
-        </tbody>
-    </table>
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
+        </table>
 
-    <p style="text-align: center;">Total: <?php echo mysqli_num_rows($query) ?></p>
-
+        <p style="text-align: center;">Total: <?php echo mysqli_num_rows($query) ?></p>
+        <br>
+        <a href="pdf-user.php" class="btn-yellow">Print PDF</a>
     </div>
 </body>
 </html>
