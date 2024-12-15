@@ -22,7 +22,7 @@ if(isset($_POST['login'])){
             $_SESSION['usertype'] = $arr['usertype'];
     
             if($arr['usertype'] == 1){
-                header("Location: desbord-mimin.php");
+                header("Location: index.php");
             }
             else if($arr['usertype'] == 0){
                 header("Location: index.php");
