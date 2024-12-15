@@ -141,10 +141,10 @@ if($data < 1){
             <input type="text" name="email" value="<?php echo $user['email'] ?>">
 
             <label for="password"><p>Update Password</p></label>
-            <input type="password" name="password">
+            <input type="password" name="password" required>
 
             <label for="password"><p>Confirm Password</p></label>
-            <input type="password" name="confirm-password">
+            <input type="password" name="confirm-password" required>
 
             <input type="submit" name="simpan" value="Update">
         </div>
