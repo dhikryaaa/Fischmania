@@ -109,7 +109,6 @@
             outline: none;
             -webkit-transition: 0.3s;
             transition: 0.3s;
-
         }
 
         input[type='text']:focus {

@@ -34,6 +34,7 @@
             padding: 20px;
             position: relative;
             justify-content: space-evenly;
+            align-items: center;
         }
 
         .card-left, .card-right {
@@ -110,7 +111,6 @@
             outline: none;
             -webkit-transition: 0.3s;
             transition: 0.3s;
-
         }
 
         input[type='text']:focus {

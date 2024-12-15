@@ -22,7 +22,7 @@
             color: white;
         }
 
-        .card {
+        .card { 
             display: flex; 
             gap: 5px;
             width: 80%;
@@ -92,26 +92,30 @@
             box-shadow: 0 4px 10px rgba(255, 228, 74, 0.5); 
         }
 
-        input[type='text'] {
+        input[type='text'], input[type='password'] {
+            width: 100%;
             border-radius: 4px;
             border: 3px solid #555555;
             outline: none;
             -webkit-transition: 0.3s;
             transition: 0.3s;
-
+            box-sizing: border-box;
         }
 
-        input[type='text']:focus {
+        input[type='text']:focus, input[type='password']:focus {
             border: 3px solid #222222
         }
 
+        label {
+            text-shadow: 2px 2px 2px #222222;
+        }
     </style>
 </head>
 <body>
     <form action="proses-edit.php" method="POST" enctype="multipart/form-data" class="card">
         <div class="card-left">
             <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>">
-
+            
             <label for="name"><p>Email</p></label>
             <input type="text" name="name" value="<?php echo $siswa['email'] ?>">
 
@@ -120,6 +124,8 @@
 
             <label for="usertype"><p>Usertype</p></label>
             <input type="text" name="usertype" value="<?php echo $siswa['usertype'] ?>">
+            
+            <input type="submit" value="Update">
         </div>
     </form>
 </body>
